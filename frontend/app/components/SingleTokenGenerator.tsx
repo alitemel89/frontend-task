@@ -20,7 +20,7 @@ export default function SingleTokenGenerator() {
   
         // Make an HTTP POST request to the validator service
         axios
-          .post('http://localhost:5000/validate-token', { token: tokenString }) // Use 'token' property
+          .post('https://task-backend-i563.onrender.com/validate-token', { token: tokenString }) // Use 'token' property
           .then((response) => {
             const isValid = response.data.isValid;
             setIsValid(isValid);
